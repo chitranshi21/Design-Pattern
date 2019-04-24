@@ -1,0 +1,25 @@
+Decorator Pattern
+
+The idea behind decorator pattern is to provide a facade to accomplish underlying functionality. 
+Example - 
+	BufferedReader br = new BufferedReader(new InputStreamReader(stream))
+	BufferedReader br = new BufferedReader(new FileStreamReader(stream))
+	
+The BufferedReader object acts as a Decorator around any stream reader, and gets you chunks of input stream. 
+
+So Design wise - lets say you want a * after every chunk 
+StarLineReader extends Reader and takes an instance of Reader
+it then overrides the readline function and adds a *.
+
+Discussion over Proxy/Adaptor/Facade pattern
+
+Proxy Pattern -  Changes the implementation, without changing the interface, so you can interchange original object with the proxy object
+because the interface is the same, so you can do more, hiding the abstraction under the same name
+
+
+Adaptor Pattern - Changes the interface, but does not change the implementations. they cannot be replaced by original object as the interface is changed 
+we delegate the functionality to the original object by simply providing that object with the params it needs, at the same time exposing the functionality as
+works best for the scenario, think of it as an adaptor that converts volt from one country type to another.
+
+Facade Pattern - changes the interface and calls the original object within, very similar to adaptors, but usually used by
+Monoliths. 

@@ -2,7 +2,13 @@ package com.designpatterns.decorator.decorator;
 
 import java.io.InputStream;
 
+import com.designpatterns.decorator.reader.Reader;
+
 public class StarDecorator extends ReaderDecorator {
+	
+	public StarDecorator(Reader reader) {
+		super(reader);
+	}
 
 	public StarDecorator(InputStream stream) {
 		super(stream);
