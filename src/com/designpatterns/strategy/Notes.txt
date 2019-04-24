@@ -1,0 +1,20 @@
+Strategy Pattern 
+
+The idea behind strategy pattern is to think of an entity/object as a combination of configurations or actions.
+rather than binding the actions to the object, we just define a has-a relationship for those actions
+
+Reason why to use strategy 
+- Abstract classes are limited in horizontal code sharing, and hierarchy. One class can extend one super class
+	no code sharing among siblings. Using strategy allows us to create interfaces instead of abstract classes and
+	injecting the implementation in the concrete class while referring to the interface. 
+
+- Flexible for code reuse among same level, and also expose the option for interchanging the strategy or functionality
+	when needed.
+	
+So lets say an employee has few functionality calculateSalary calculateAttendence calulateVacation.
+Now if we put these functionalities in the Abstract class employee and extend the same in the concrete implementation.
+it would not allow us to re-use the code, for more than one employee. Instead if we think of an employee as an object
+having configurations for salary, attendance , vacations. we can easily swap between different implementations and reuse
+some of the functionality as well.
+We can still have an abstract class so that the subclass implement those methods 
+
