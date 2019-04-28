@@ -1,0 +1,31 @@
+Factory Method - Abstract out the creation of object into a class that handles it
+but why —> its just a new ClassName(); 
+
+2 reasons - 
+
+1. the creation of object can be based on complex logic, and you dont want to copy paste the same logic everywhere you creating it
+2. the creation of object can be of different types, think of concrete implementaton, and so different factories impl can be used to which
+can be swapped based on condition 
+
+Factory Class also allows us to stop from having class explosion, instead of creating multiple concrete classes with different properties, we can think of 
+a small number of classes that can be passed a set of configuration and they can generate the object. So if we parametrise the factory class and 
+then based on different params just create an object. we reduce having many concrete implementation. 
+
+In the given example - 
+We will try to create different room types based on the condition provided.
+We will have one Room class, and the factory will inject different values, based on the configuration.
+
+Types of Room - 
+- BasicRoom
+	- one King size bed / Room
+	- One Bathroom 
+
+- SuitRoom
+  - Basic Room 
+  - Dining table
+  - Swimming pool
+  
+- LargeRoom
+	- Basic Room
+	- One Queen size bed / Room
+	- 
