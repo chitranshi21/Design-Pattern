@@ -19,6 +19,20 @@ public class Singleton {
 		
 	}
 	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
 	public static Singleton getInstance() {
 		if(null == instance) {
 			instance = new Singleton();
