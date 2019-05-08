@@ -1,0 +1,9 @@
+Singleton pattern allows one and only one instance of a class to be available in the context.
+There are a lot of reasons why you should not use singleton - 
+
+	- You may seem to find a reason for introducing one instance of a class now, but there might be future scenarios
+	  where you need it. restricting it to just have one, is unnecessary.
+	- Almost always when you use singleton, we put the instance in some global context. This goes against the ideology
+	of scoping. please scope
+	- singleton, doesn't always give you one instance, think of multiple instance of application running. with shared DB.
+	
