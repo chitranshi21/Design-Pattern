@@ -1,0 +1,3 @@
+Adapter pattern is used when the interface of the client is different from the interface of the service.
+Adapter takes in an instance of the service class and implements the interface which the client class has 
+
